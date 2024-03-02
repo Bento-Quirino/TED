@@ -8,3 +8,18 @@ Após criarmos exemplos juntos em sala de aula, vocês teram que me criar um mó
 - retirarItem(pilha): void
 - procurarNaPilha(pilha, item): Object
 - estaVazia(pilha): boolean
+
+```javascript
+const = listaAlunos [
+    {
+        nome: 'Dom Casmurro',
+        id: 145,
+    },
+    {
+        nome: 'A Metamorfose',
+        id: 220,
+    },
+]
+```
+
+Use os objetos acima na sua pilha (uma pilha de livros)
