@@ -43,7 +43,33 @@ export function retirarItem(pilha) {
 }
 
 //Ver se tem na pilha
+export function procurarNaPilha(pilha, item) {
+    // Ande a pilha, e procure nela
+    for (let i = 0; i < pilha.length; i++) {
+        if (pilha[i].ra === item.ra) {
+            console.log("Achei o aluno " + item.nome)
+            return
+        }
+    }
+    console.log("Não achei o aluno " + item.nome)
 
+    // Se eu achar, retorno true ou um console.log()
+    // Se não achar, retorna false ou um console.log()
+}
 
 // Verifica se está vazia
+export function estaVazia(pilha) {
+    if (pilha[0] === undefined) {
+        console.log("Está vazia")
+        return true
+    }
 
+    return false
+}
+// 10, 11 , 12
+export function estaCheia(pilha) {
+    if(pilha[(pilha.length - 1)] !== undefined) {
+        return true
+    }
+    return false
+}
