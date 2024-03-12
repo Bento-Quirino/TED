@@ -7,14 +7,7 @@ Com base no que revisamos em nossas aulas:
 - If/Else/switch
 - Loops (for/foreach)
 - Operações com arrays 
-    - pop, retira o último elemento
-    - push, adiciona um elemento no final
-    - shift, retira o primeiro elemento
-    - unshift, adiciona um elemento no início
-    - splice, adiciona ou retira elementos em qualquer posição
-    - slice, retorna um pedaço do array
     - indexOf, retorna a posição de um elemento
-    - lastIndexOf, retorna a última posição de um elemento (caso exista mais de um)
     - includes, retorna true ou false se um elemento existe
 
 ### O projeto consiste em **Criar uma PILHA para nossos livros**.
@@ -63,7 +56,7 @@ let alunos = [
     - Livro Z retirado da pilha
     - Livro Y retirado da pilha
     - Livro X retirado da pilha
-- Ver se temos um livro na pilha pelo  (0.75)
+- Ver se temos um livro na pilha pelo título apenas, desconsidere páginas e etc (0.75)
 
 ## Considerações finais
 - Deve ser usado modularização, criando um package.json e fazendo imports/exports
