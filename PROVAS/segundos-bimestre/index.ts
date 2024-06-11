@@ -1,11 +1,15 @@
-// Array de alunos nas fileiras
-// Cada fileira pode ter NO MÁXIMO 5 alunos
+import { Paciente } from "./types";
 
-// Inserindo/populando 5 alunos por fileira
+let pacientesTriados: Paciente[] = [
+  { nome: "Maria", prioridade: "urgente" },
+  { nome: "José", prioridade: "comum" },
+  { nome: "Ana", prioridade: "emergência" },
+  { nome: "Pedro", prioridade: "urgente" },
+  { nome: "Clara", prioridade: "comum" },
+  { nome: "Bryan", prioridade: "emergência" },
+  { nome: "Mariana", prioridade: "urgente" },
+  { nome: "Peter", prioridade: "comum" },
+  { nome: "Chris", prioridade: "comum" },
+];
 
-// Função main
-function main() {
-  // Função que chama retira todos alunos da fileira e "da tchau" para eles
-  
-  // Função que chama a fileira
-}
+function main() {}
