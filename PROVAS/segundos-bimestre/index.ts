@@ -1,4 +1,5 @@
 import { Paciente } from "./types";
+import * as fila from "./fila";
 
 let pacientesTriados: Paciente[] = [
   { nome: "Maria", prioridade: "urgente" },
@@ -12,4 +13,45 @@ let pacientesTriados: Paciente[] = [
   { nome: "Chris", prioridade: "comum" },
 ];
 
-function main() {}
+function main() {
+  console.log("Alocando pacientes a suas respectivas pioridades...");
+  console.log("---------------------------------------------");
+
+  // Criando uma ala qualquer
+  const alaX = fila.create(3)
+
+  // Criando prioridades na fila
+  for (let i = 0; i < 3; i++) {
+    fila.enqueue(alaX, fila.create(5));
+  }
+
+  // Adicionando pacientes a fila com base na prioridade
+  pacientesTriados.forEach((paciente) => {
+    switch (paciente.prioridade) {
+      case "emergência":
+        fila.enqueue(alaX[0], paciente);
+        break;
+      case "urgente":
+        fila.enqueue(alaX[1], paciente);
+        break;
+      case "comum":
+        fila.enqueue(alaX[2], paciente);
+        break;
+    }
+  });
+
+  // Exibindo fila
+  console.log("Fila de pacientes por prioridade:");
+  console.log("---------------------------------------------");
+
+  console.log("Emergência:");
+  console.log(alaX[0]);
+
+  console.log("Urgente:");
+  console.log(alaX[1]);
+
+  console.log("Comum:");
+  console.log(alaX[2]);
+}
+
+main();
