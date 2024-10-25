@@ -121,3 +121,31 @@ int main() {
 ### Resumo
 - Ponto (.): usado para acessar campos da struct diretamente.
 - Seta (->): usado para acessar campos da struct via ponteiro.
+
+
+## Parâmetros por Referência em C
+
+Em C, quando passamos um parâmetro para uma função por referência, permitimos que a função modifique diretamente o valor original da variável. Para isso, usamos ponteiros para enviar o endereço de memória da variável.
+
+### Exemplo de Parâmetro por Referência
+
+Aqui, vamos usar um ponteiro para que a função `incrementar` modifique diretamente o valor de uma variável `numero`.
+
+```c
+#include <stdio.h>
+
+void incrementar(int *valor) {
+    (*valor)++; // Incrementa o valor no endereço apontado por 'valor'
+}
+
+int main() {
+    int numero = 5;
+    incrementar(&numero); // Passa o endereço de 'numero' para a função
+    printf("Número após incremento: %d\n", numero);
+    return 0;
+}
+```
+
+Explicação
+- *valor: Acessa o valor armazenado no endereço de valor, permitindo a modificação direta.
+- &numero: Passa o endereço de numero para a função incrementar, permitindo a alteração do valor original.
