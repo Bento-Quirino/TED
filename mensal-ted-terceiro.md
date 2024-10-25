@@ -67,3 +67,57 @@ Após implementar as funções solicitadas, o código principal deve:
 1. Criar uma fila com uma capacidade inicial.
 2. Inserir e remover elementos conforme necessário.
 3. Dobrar a capacidade automaticamente quando a fila atinge a capacidade máxima.
+
+# Dicas
+
+## Como Consultar uma Struct em C
+
+Para acessar os campos de uma `struct` em C, usamos:
+- **Operador de ponto (`.`)** se estamos acessando a `struct` diretamente.
+- **Operador de seta (`->`)** se estamos acessando a `struct` através de um ponteiro.
+
+### Exemplo 1: Consulta com o Operador de Ponto
+
+Se a variável da `struct` está diretamente acessível, usamos o operador de ponto (`.`).
+
+```c
+#include <stdio.h>
+
+typedef struct {
+    char nome[50];
+    int idade;
+} Pessoa;
+
+int main() {
+    Pessoa p;
+    p.idade = 30; // Acessando diretamente o campo 'idade'
+    printf("Idade: %d\n", p.idade);
+    return 0;
+}
+```
+
+### Exemplo 2: Consulta com o Operador de Seta (Ponteiro)
+
+Se estamos acessando a struct através de um ponteiro, usamos o operador de seta (->).
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct {
+    char nome[50];
+    int idade;
+} Pessoa;
+
+int main() {
+    Pessoa *p = (Pessoa *)malloc(sizeof(Pessoa));
+    p->idade = 30; // Acessando o campo 'idade' usando ponteiro
+    printf("Idade: %d\n", p->idade);
+    free(p);
+    return 0;
+}
+```
+
+### Resumo
+- Ponto (.): usado para acessar campos da struct diretamente.
+- Seta (->): usado para acessar campos da struct via ponteiro.
